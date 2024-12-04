@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket - Stock</title>
+    <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/grocery-store-logo-template-with-shopping-basket-food_884185-63.jpg?w=740">
+    <link rel="stylesheet" href="stock.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div class="container">
+        <h1>Stock Management System</h1> -->
+
+         <!-- Header with Login and Register -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://img.freepik.com/premium-vector/grocery-store-logo-template-with-shopping-basket-food_884185-63.jpg?w=740" alt="Shop Logo" class="shop-logo">
+                <h1 class="shop-name">Supermarket</h1>
+            </div>
+            <!-- Hamburger Menu -->
+        <button class="hamburger" id="hamburger">
+            &#9776;
+        </button>
+            <nav id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a> 
+                <a href="register.html" class="nav-link">Register</a>  
+                <a href="buyer.html" class="nav-link">Buyer</a> 
+                <a href="billing.html" class="nav-link">Billing</a> 
+                <a href="stock.html" class="nav-link">Stock</a> 
+                <a href="feedback.html" class="nav-link">Feedback</a>
+                
+            </nav>
+        </div>
+    </header>
+
+        <!-- Form to receive stock information -->
+        <div class="form-section">
+            <h2>Receive Stock</h2>
+            <form id="receiveStockForm">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" placeholder="Enter product name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productCategory">Product Category:</label>
+                    <select id="productCategory" required>
+                        <option value="" disabled selected>Select category</option>
+                        <option value="packets">Biscuits/Chocolates/Cakes..</option>
+                        <option value="kg">Vegetables</option>
+                        <option value="kg">Atta/Rice/Dals..</option>
+                        <option value="liters">Liquids</option>
+                        <option value="pieces">General Items</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="productQuantity">Product Quantity:</label>
+                    <input type="number" id="productQuantity" placeholder="Enter product quantity" required>
+                    <select id="quantityUnit" required>
+                        <option value="" disabled selected>Select unit</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPrice">Product Price (₹):</label>
+                    <input type="number" id="productPrice" placeholder="Enter product price" required>
+                </div>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Form to update stock -->
+        <div class="form-section">
+            <h2>Update Stock</h2>
+            <form id="updateStockForm">
+                <div class="form-group">
+                    <label for="updateProductName">Product Name:</label>
+                    <input type="text" id="updateProductName" placeholder="Enter product name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="updateProductPrice">New Price (₹):</label>
+                    <input type="number" id="updateProductPrice" placeholder="Enter new price">
+                </div>
+
+                <div class="form-group">
+                    <label for="updateProductQuantity">New Quantity:</label>
+                    <input type="number" id="updateProductQuantity" placeholder="Enter new quantity">
+                </div>
+
+                <button type="submit">Update Stock</button>
+            </form>
+        </div>
+
+        <!-- Stock report section -->
+        <div class="report-section">
+            <h2>Stock Report</h2>
+            <button id="generateReport">Generate Stock Report</button>
+            <div id="report"></div>
+        </div>
+    </div>
+
+    <script src="stock.js"></script>
+</body>
+</html>
